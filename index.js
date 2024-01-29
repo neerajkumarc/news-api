@@ -13,7 +13,7 @@ app.set("views", path.join(__dirname, "views"));
 
 async function scrapeNews(url) {
   const allNews = [];
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 3; i++) {
     const newUrl = `${url}/page-${i}`;
     const { data } = await axios.get(newUrl);
     const $ = cheerio.load(data);
